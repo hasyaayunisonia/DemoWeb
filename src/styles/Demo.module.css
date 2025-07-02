@@ -1,0 +1,15 @@
+.wrapper {
+  padding: 1rem;
+  border: 2px dashed #ccc;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  width: 70vw;
+}
+
+:global(.dark) .wrapper {
+  border-color: #d3b57c;
+  background-color: #1f2937;
+  color: white;
+}
