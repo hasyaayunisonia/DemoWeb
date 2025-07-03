@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { TextField, Button, Box } from "@mui/material";
+import { useState } from 'react';
+import { TextField, Button, Box } from '@mui/material';
 
 const ControlledForm = () => {
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -14,7 +14,7 @@ const ControlledForm = () => {
       <TextField
         label="Nama"
         value={name}
-        onChange={(e) => setName(e.target.value)}
+        onChange={e => setName(e.target.value)}
         fullWidth
         margin="normal"
       />

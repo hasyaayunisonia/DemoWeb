@@ -1,37 +1,31 @@
-import React from "react";
-import {
-  TextField,
-  Button,
-  Box,
-  Typography,
-  Autocomplete,
-} from "@mui/material";
-import { useForm, Controller } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
+import React from 'react';
+import { TextField, Button, Box, Typography, Autocomplete } from '@mui/material';
+import { useForm, Controller } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 
 // Key - Value options
 const jenisBarangOptions = [
-  { key: 1, value: "Komputer" },
-  { key: 2, value: "Printer" },
-  { key: 3, value: "Proyektor" },
-  { key: 4, value: "Lainnya" },
+  { key: 1, value: 'Komputer' },
+  { key: 2, value: 'Printer' },
+  { key: 3, value: 'Proyektor' },
+  { key: 4, value: 'Lainnya' },
 ];
 
 // Yup schema
 const schema = yup.object({
-  nama: yup.string().required("Nama pelapor wajib diisi"),
+  nama: yup.string().required('Nama pelapor wajib diisi'),
   jenisBarang: yup
     .object({
-      key: yup.number().required("Jenis barang wajib dipilih"),
+      key: yup.number().required('Jenis barang wajib dipilih'),
       value: yup.string().required(),
     })
-    .required("Jenis barang wajib dipilih")
-    .typeError("Jenis barang wajib dipilih"),
+    .required('Jenis barang wajib dipilih')
+    .typeError('Jenis barang wajib dipilih'),
   deskripsi: yup
     .string()
-    .required("Deskripsi kerusakan wajib diisi")
-    .min(10, "Minimal 10 karakter"),
+    .required('Deskripsi kerusakan wajib diisi')
+    .min(10, 'Minimal 10 karakter'),
 });
 
 const FormLaporanKerusakan = () => {
@@ -40,17 +34,17 @@ const FormLaporanKerusakan = () => {
     handleSubmit,
     formState: { errors, isValid },
   } = useForm({
-    mode: "onChange",
+    mode: 'onChange',
     resolver: yupResolver(schema),
     defaultValues: {
-      nama: "",
-      jenisBarang: { key: 0, value: "" },
-      deskripsi: "",
+      nama: '',
+      jenisBarang: { key: 0, value: '' },
+      deskripsi: '',
     },
   });
 
-  const onSubmit = (data: any) => {
-    console.log("Data dikirim:", data);
+  const onSubmit = (data: object) => {
+    console.log('Data dikirim:', data);
   };
 
   return (
@@ -59,13 +53,13 @@ const FormLaporanKerusakan = () => {
       onSubmit={handleSubmit(onSubmit)}
       sx={{
         maxWidth: 500,
-        mx: "auto",
+        mx: 'auto',
         mt: 5,
         p: 3,
-        display: "flex",
-        flexDirection: "column",
+        display: 'flex',
+        flexDirection: 'column',
         gap: 2,
-        border: "1px solid #ccc",
+        border: '1px solid #ccc',
         borderRadius: 2,
         boxShadow: 1,
       }}
@@ -92,12 +86,12 @@ const FormLaporanKerusakan = () => {
         render={({ field }) => (
           <Autocomplete
             options={jenisBarangOptions}
-            getOptionLabel={(option) => option?.value || ""}
+            getOptionLabel={option => option?.value || ''}
             isOptionEqualToValue={(option, value) => option.key === value?.key}
             value={field.value}
             onChange={(_, newValue) => field.onChange(newValue)}
             onBlur={field.onBlur}
-            renderInput={(params) => (
+            renderInput={params => (
               <TextField
                 {...params}
                 label="Jenis Barang"

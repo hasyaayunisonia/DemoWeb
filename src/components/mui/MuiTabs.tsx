@@ -1,5 +1,5 @@
-import { Tabs, Tab, Box, Typography } from "@mui/material";
-import { useState } from "react";
+import { Tabs, Tab, Box, Typography } from '@mui/material';
+import { useState } from 'react';
 
 // Reusable TabPanel agar bersih
 interface TabPanelProps {
@@ -28,7 +28,7 @@ export default function MuiTabs() {
   };
 
   return (
-    <Box sx={{ width: "100%", typography: "body1" }}>
+    <Box sx={{ width: '100%', typography: 'body1' }}>
       <Tabs
         value={value}
         onChange={handleChange}

@@ -1,13 +1,11 @@
 // components/LoginForm.tsx
-import React from "react";
-import type { SubmitHandler } from "react-hook-form";
-import { useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { setAuth } from "../../../features/auth/authSlice";
-import { Button, TextField } from "@mui/material";
+import React from 'react';
+import type { SubmitHandler } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
+// import { setAuth } from "../../../features/auth/authSlice";
+import { Button, TextField } from '@mui/material';
 // import { loginUser } from "../../../../services/authService";
-import { loginUser } from "../../../services/authService";
+import { loginUser } from '../../../services/authService';
 
 type FormValues = {
   username: string;
@@ -19,33 +17,31 @@ type Props = {
 };
 
 const LoginFormNew = (props: Props) => {
-  console.log("Props LoginForm:", props); // 🔍 log props
+  console.log('Props LoginForm:', props); // 🔍 log props
   const { onSuccess } = props;
-  console.log("Apakah onSuccess ada?", onSuccess);
+  console.log('Apakah onSuccess ada?', onSuccess);
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm<FormValues>();
 
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const onSubmit: SubmitHandler<FormValues> = async (data) => {
+  const onSubmit: SubmitHandler<FormValues> = async data => {
     try {
       const token = await loginUser(data.username, data.password);
-      console.log("Token boz:", token);
+      console.log('Token boz:', token);
 
-      console.log("Apakah onSuccess ada?", onSuccess);
+      console.log('Apakah onSuccess ada?', onSuccess);
 
       if (token) {
         onSuccess?.(token, data.username);
         // dispatch(setAuth({ token, username: "admin" }));
         // navigate("/dashboard");
       } else {
-        console.warn("Login gagal: token tidak ditemukan");
+        console.warn('Login gagal: token tidak ditemukan');
       }
     } catch (err) {
-      console.error("Login error:", err);
+      console.error('Login error:', err);
     }
   };
 
@@ -53,7 +49,7 @@ const LoginFormNew = (props: Props) => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <TextField
         label="Username"
-        {...register("username", { required: "Username is required" })}
+        {...register('username', { required: 'Username is required' })}
         error={!!errors.username}
         helperText={errors.username?.message}
         fullWidth
@@ -62,7 +58,7 @@ const LoginFormNew = (props: Props) => {
       <TextField
         label="Password"
         type="password"
-        {...register("password", { required: "Password is required" })}
+        {...register('password', { required: 'Password is required' })}
         error={!!errors.password}
         helperText={errors.password?.message}
         fullWidth

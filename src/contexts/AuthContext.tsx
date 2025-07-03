@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from 'react';
 
 type AuthType = {
   token: string | null;
@@ -10,27 +10,23 @@ type AuthType = {
 export const AuthContext = createContext<AuthType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const [token, setToken] = useState<string | null>(
-    localStorage.getItem("token")
-  );
-  const [username, setUsername] = useState<string | null>(
-    localStorage.getItem("username")
-  );
+  const [token, setToken] = useState<string | null>(localStorage.getItem('token'));
+  const [username, setUsername] = useState<string | null>(localStorage.getItem('username'));
 
   const login = (username: string, token: string) => {
     setToken(token);
     setUsername(username);
-    localStorage.setItem("token", token);
-    localStorage.setItem("username", username);
-    console.log("Login berhasil!");
+    localStorage.setItem('token', token);
+    localStorage.setItem('username', username);
+    console.log('Login berhasil!');
   };
 
   const logout = () => {
     setToken(null);
     setUsername(null);
-    localStorage.removeItem("token");
-    localStorage.removeItem("username");
-    console.log("Logout berhasil!");
+    localStorage.removeItem('token');
+    localStorage.removeItem('username');
+    console.log('Logout berhasil!');
   };
 
   return (
@@ -42,7 +38,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
 export const useAuth = () => {
   const context = useContext(AuthContext);
-  if (!context) throw new Error("useAuth must be used within AuthProvider");
+  if (!context) throw new Error('useAuth must be used within AuthProvider');
   return context;
 };
 

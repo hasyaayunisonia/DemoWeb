@@ -1,13 +1,13 @@
-import { useState } from "react";
-import { Box, Button, Modal, Typography } from "@mui/material";
+import { useState } from 'react';
+import { Box, Button, Modal, Typography } from '@mui/material';
 
 // Styling kontainer modal
 const style = {
-  position: "absolute" as const,
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  bgcolor: "background.paper",
+  position: 'absolute' as const,
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  bgcolor: 'background.paper',
   boxShadow: 24,
   p: 4,
   borderRadius: 2,
@@ -21,9 +21,9 @@ interface MuiModalProps {
 }
 
 export default function MuiModal({
-  title = "Judul Modal",
-  content = "Ini adalah konten default di dalam modal.",
-  buttonLabel = "Buka Modal",
+  title = 'Judul Modal',
+  content = 'Ini adalah konten default di dalam modal.',
+  buttonLabel = 'Buka Modal',
 }: MuiModalProps) {
   const [open, setOpen] = useState(false);
 

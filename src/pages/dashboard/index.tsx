@@ -1,7 +1,7 @@
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { clearAuth } from "../../features/auth/authSlice";
-import { useAuth } from "../../contexts/AuthContext";
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { clearAuth } from '../../features/auth/authSlice';
+import { useAuth } from '../../contexts/AuthContext';
 
 const Dashboard = () => {
   const { logout } = useAuth();
@@ -14,30 +14,30 @@ const Dashboard = () => {
   const handleClick = (number: number) => {
     switch (number) {
       case 1:
-        navigate("/laporan-kerusakan");
+        navigate('/laporan-kerusakan');
         break;
       case 2:
-        navigate("/demo");
+        navigate('/demo');
         break;
       case 3:
-        navigate("/shopping-cart");
+        navigate('/shopping-cart');
         break;
       case 4:
         dispatch(clearAuth());
         logout();
-        navigate("/");
+        navigate('/');
         break;
       case 5:
-        navigate("/dynamic-form");
+        navigate('/dynamic-form');
         break;
       case 6:
-        navigate("/feedback-form");
+        navigate('/feedback-form');
         break;
       case 7:
-        navigate("/comment-form");
+        navigate('/comment-form');
         break;
       case 8:
-        navigate("/upload-form");
+        navigate('/upload-form');
         break;
       default:
         break;

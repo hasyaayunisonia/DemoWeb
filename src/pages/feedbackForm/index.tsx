@@ -2,15 +2,13 @@ export default function FeedbackForm() {
   return (
     <div className="w-full h-screen bg-gray-50 flex items-center justify-center p-4">
       <form
-        onSubmit={(e) => {
+        onSubmit={e => {
           e.preventDefault();
-          alert("Feedback terkirim!");
+          alert('Feedback terkirim!');
         }}
         className="w-full max-w-xl bg-white p-6 rounded-xl shadow-md space-y-5"
       >
-        <h2 className="text-2xl font-semibold text-gray-800 text-center">
-          Kirim Masukan
-        </h2>
+        <h2 className="text-2xl font-semibold text-gray-800 text-center">Kirim Masukan</h2>
 
         <div className="flex flex-col">
           <label htmlFor="nama" className="text-sm mb-1 text-gray-600">

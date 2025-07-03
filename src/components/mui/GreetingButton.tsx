@@ -1,13 +1,13 @@
 // components/GreetingButton.tsx
-import React, { useState } from "react";
-import { fetchGreeting } from "../../services/greetingService";
+import React, { useState } from 'react';
+import { fetchGreeting } from '../../services/greetingService';
 type Props = {
   name: string;
   onGreet?: (message: string) => void;
 };
 
 const GreetingButton: React.FC<Props> = ({ name, onGreet }) => {
-  const [greeting, setGreeting] = useState("");
+  const [greeting, setGreeting] = useState('');
 
   const handleClick = async () => {
     const msg = await fetchGreeting(name);

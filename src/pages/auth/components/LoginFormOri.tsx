@@ -1,10 +1,10 @@
 // components/LoginForm.tsx
-import React from "react";
-import type { SubmitHandler } from "react-hook-form";
-import { useForm } from "react-hook-form";
+import React from 'react';
+import type { SubmitHandler } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 
-import { Button, TextField } from "@mui/material";
-import { loginUser } from "../../../services/authService";
+import { Button, TextField } from '@mui/material';
+import { loginUser } from '../../../services/authService';
 
 type FormValues = {
   username: string;
@@ -22,7 +22,7 @@ const LoginForm: React.FC<Props> = ({ onSuccess }) => {
     formState: { errors, isSubmitting },
   } = useForm<FormValues>();
 
-  const onSubmit: SubmitHandler<FormValues> = async (data) => {
+  const onSubmit: SubmitHandler<FormValues> = async data => {
     const token = await loginUser(data.username, data.password);
     onSuccess?.(token);
   };
@@ -31,7 +31,7 @@ const LoginForm: React.FC<Props> = ({ onSuccess }) => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <TextField
         label="Username"
-        {...register("username", { required: "Username is required" })}
+        {...register('username', { required: 'Username is required' })}
         error={!!errors.username}
         helperText={errors.username?.message}
         fullWidth
@@ -40,7 +40,7 @@ const LoginForm: React.FC<Props> = ({ onSuccess }) => {
       <TextField
         label="Password"
         type="password"
-        {...register("password", { required: "Password is required" })}
+        {...register('password', { required: 'Password is required' })}
         error={!!errors.password}
         helperText={errors.password?.message}
         fullWidth

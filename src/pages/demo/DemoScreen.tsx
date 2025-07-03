@@ -1,21 +1,21 @@
-import { useState } from "react";
+import { useState } from 'react';
 import {
   Dialog,
   DialogHeader,
   DialogTitle,
   DialogFooter,
   DialogContent,
-} from "@/components/ui/dialog";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+} from '@/components/ui/dialog';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import ThemeToggle from "../../components/ThemeToogle";
-import StyledButton from "@/components/StyledButton";
-import styles from "../../styles/Demo.module.css";
+} from '@/components/ui/dropdown-menu';
+import ThemeToggle from '../../components/ThemeToogle';
+import StyledButton from '@/components/StyledButton';
+import styles from '../../styles/Demo.module.css';
 
 export default function DemoScreen() {
   const [open, setOpen] = useState(false);

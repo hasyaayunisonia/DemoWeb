@@ -1,11 +1,11 @@
 // routes/AppRoutes.tsx
-import { Routes, Route } from "react-router-dom";
-import { Suspense } from "react";
-import { privateRoutes } from "./privateRoutes";
-import { publicRoutes } from "./publicRoutes";
-import PrivateRoute from "./PrivateRoute";
-import PublicRoute from "./PublicRoute";
-import { CircularProgress, Box, Typography } from "@mui/material";
+import { Routes, Route } from 'react-router-dom';
+import { Suspense } from 'react';
+import { privateRoutes } from './privateRoutes';
+import { publicRoutes } from './publicRoutes';
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
+import { CircularProgress, Box, Typography } from '@mui/material';
 
 const LoadingFallback = () => {
   return (

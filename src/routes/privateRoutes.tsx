@@ -1,45 +1,45 @@
-import { lazy } from "react";
+import { lazy } from 'react';
 
-const FormLaporanKerusakan = lazy(() => import("../pages/laporanKerusakan"));
-const DemoScreen = lazy(() => import("../pages/demo/DemoScreen"));
-const Dashboard = lazy(() => import("../pages/dashboard"));
-const ShoppingCart = lazy(() => import("../pages/cart/index"));
-const DynamicForm = lazy(() => import("../pages/dynamicSkillForm/index"));
-const FeedbackForm = lazy(() => import("../pages/feedbackForm/index"));
-const CommentForm = lazy(() => import("../pages/commentForm/index"));
-const UploadFormWithMock = lazy(() => import("../pages/uploadForm/index"));
+const FormLaporanKerusakan = lazy(() => import('../pages/laporanKerusakan'));
+const DemoScreen = lazy(() => import('../pages/demo/DemoScreen'));
+const Dashboard = lazy(() => import('../pages/dashboard'));
+const ShoppingCart = lazy(() => import('../pages/cart/index'));
+const DynamicForm = lazy(() => import('../pages/dynamicSkillForm/index'));
+const FeedbackForm = lazy(() => import('../pages/feedbackForm/index'));
+const CommentForm = lazy(() => import('../pages/commentForm/index'));
+const UploadFormWithMock = lazy(() => import('../pages/uploadForm/index'));
 
 export const privateRoutes = [
   {
-    path: "/dashboard",
+    path: '/dashboard',
     element: <Dashboard />,
   },
   {
-    path: "/laporan-kerusakan",
+    path: '/laporan-kerusakan',
     element: <FormLaporanKerusakan />,
   },
   {
-    path: "/demo",
+    path: '/demo',
     element: <DemoScreen />,
   },
   {
-    path: "/shopping-cart",
+    path: '/shopping-cart',
     element: <ShoppingCart />,
   },
   {
-    path: "/dynamic-form",
+    path: '/dynamic-form',
     element: <DynamicForm />,
   },
   {
-    path: "/feedback-form",
+    path: '/feedback-form',
     element: <FeedbackForm />,
   },
   {
-    path: "/comment-form",
+    path: '/comment-form',
     element: <CommentForm />,
   },
   {
-    path: "/upload-form",
+    path: '/upload-form',
     element: <UploadFormWithMock />,
   },
 ];
