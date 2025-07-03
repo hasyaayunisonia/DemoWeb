@@ -10,7 +10,7 @@ import {
 import { Controller, useForm } from 'react-hook-form';
 import { useSnackbar } from 'notistack';
 import { useRef, useState } from 'react';
-import mock from '@/api/mock';
+// import mock from '@/api/mock';
 
 import axios from 'axios';
 import type { AxiosProgressEvent } from 'axios';
@@ -93,7 +93,7 @@ export default function AutoUploadOnSelect() {
       formData.append('content', data.content);
 
       // Tambahkan file yang sudah selesai upload
-      uploads.forEach((item, i) => {
+      uploads.forEach(item => {
         if (item.status === 'done') {
           formData.append('files', item.file); // bisa pakai `files[]` jika backend pakai array
         }
