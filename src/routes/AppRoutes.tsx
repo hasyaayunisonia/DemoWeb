@@ -5,9 +5,27 @@ import { privateRoutes } from "./privateRoutes";
 import { publicRoutes } from "./publicRoutes";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
+import { CircularProgress, Box, Typography } from "@mui/material";
+
+const LoadingFallback = () => {
+  return (
+    <Box
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
+      height="100vh"
+    >
+      <CircularProgress size={60} thickness={4} color="primary" />
+      <Typography mt={2} variant="h6" color="textSecondary">
+        Loading...
+      </Typography>
+    </Box>
+  );
+};
 
 const AppRoutes = () => (
-  <Suspense fallback={<div>Loading...</div>}>
+  <Suspense fallback={<LoadingFallback />}>
     <Routes>
       <Route element={<PublicRoute />}>
         {publicRoutes.map((r, i) => (
