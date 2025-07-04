@@ -8,6 +8,7 @@ const DynamicForm = lazy(() => import('../pages/dynamicSkillForm/index'));
 const FeedbackForm = lazy(() => import('../pages/feedbackForm/index'));
 const CommentForm = lazy(() => import('../pages/commentForm/index'));
 const UploadFormWithMock = lazy(() => import('../pages/uploadForm/index'));
+const Student = lazy(() => import('../pages/student/index'));
 
 export const privateRoutes = [
   {
@@ -41,5 +42,9 @@ export const privateRoutes = [
   {
     path: '/upload-form',
     element: <UploadFormWithMock />,
+  },
+  {
+    path: '/student',
+    element: <Student />,
   },
 ];

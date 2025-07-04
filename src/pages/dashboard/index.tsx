@@ -39,6 +39,9 @@ const Dashboard = () => {
       case 8:
         navigate('/upload-form');
         break;
+      case 9:
+        navigate('/student');
+        break;
       default:
         break;
     }
@@ -60,6 +63,8 @@ const Dashboard = () => {
       <button onClick={() => handleClick(7)}>Comment Form</button>
       <br></br>
       <button onClick={() => handleClick(8)}>Upload Form</button>
+      <br></br>
+      <button onClick={() => handleClick(9)}>Student</button>
       <br></br>
       <button onClick={() => handleClick(4)}>Logout</button>
     </div>
