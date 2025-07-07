@@ -9,7 +9,7 @@ const FeedbackForm = lazy(() => import('../pages/feedbackForm/index'));
 const CommentForm = lazy(() => import('../pages/commentForm/index'));
 const UploadFormWithMock = lazy(() => import('../pages/uploadForm/index'));
 const Student = lazy(() => import('../pages/student/index'));
-const VirtualizedMuiTable = lazy(() => import('../pages/virtualizeTable/index'));
+const VirtualizedMuiChat = lazy(() => import('../pages/virtualizeChat/index'));
 
 export const privateRoutes = [
   {
@@ -49,7 +49,7 @@ export const privateRoutes = [
     element: <Student />,
   },
   {
-    path: '/virtualize-table',
-    element: <VirtualizedMuiTable />,
+    path: '/virtualize-chat',
+    element: <VirtualizedMuiChat />,
   },
 ];

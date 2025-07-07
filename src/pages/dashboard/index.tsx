@@ -42,6 +42,9 @@ const Dashboard = () => {
       case 9:
         navigate('/student');
         break;
+      case 10:
+        navigate('/virtualize-chat');
+        break;
       default:
         break;
     }
@@ -65,6 +68,8 @@ const Dashboard = () => {
       <button onClick={() => handleClick(8)}>Upload Form</button>
       <br></br>
       <button onClick={() => handleClick(9)}>Student</button>
+      <br></br>
+      <button onClick={() => handleClick(10)}>Virtualized Chat</button>
       <br></br>
       <button onClick={() => handleClick(4)}>Logout</button>
     </div>
