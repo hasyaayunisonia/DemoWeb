@@ -16,10 +16,12 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <LoginForm onSuccess={handleSuccess} />
-      {/* <LoginFormNew onSuccess={handleSuccess} /> */}
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+      <div className="flex flex-col gap-4  items-center">
+        <h2>Login</h2>
+        <LoginForm onSuccess={handleSuccess} />
+        {/* <LoginFormNew onSuccess={handleSuccess} /> */}
+      </div>
     </div>
   );
 };
