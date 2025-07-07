@@ -9,6 +9,7 @@ const FeedbackForm = lazy(() => import('../pages/feedbackForm/index'));
 const CommentForm = lazy(() => import('../pages/commentForm/index'));
 const UploadFormWithMock = lazy(() => import('../pages/uploadForm/index'));
 const Student = lazy(() => import('../pages/student/index'));
+const VirtualizedMuiTable = lazy(() => import('../pages/virtualizeTable/index'));
 
 export const privateRoutes = [
   {
@@ -46,5 +47,9 @@ export const privateRoutes = [
   {
     path: '/student',
     element: <Student />,
+  },
+  {
+    path: '/virtualize-table',
+    element: <VirtualizedMuiTable />,
   },
 ];
