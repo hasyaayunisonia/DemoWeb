@@ -2,14 +2,12 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { clearAuth } from '../../features/auth/authSlice';
 import { useAuth } from '../../contexts/AuthContext';
+import TimeBasedGreeting from '@/components/atoms/TimeBasedGreeting';
 
 const Dashboard = () => {
   const { logout } = useAuth();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  //   const user = useSelector((state: RootState) => state.auth); // ✅ di sini
-
-  //   console.log("USER:", user);
 
   const handleClick = (number: number) => {
     switch (number) {
@@ -51,8 +49,10 @@ const Dashboard = () => {
   };
 
   return (
-    <div>
-      <h2>Dashboard</h2>
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+      <div className="flex  items-center justify-center">
+        <TimeBasedGreeting render={greeting => <h1>{greeting}, There!</h1>} />
+      </div>
       <button onClick={() => handleClick(1)}>Form</button>
       <br></br>
       <button onClick={() => handleClick(2)}>Demo</button>
