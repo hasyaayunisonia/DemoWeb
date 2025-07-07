@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { clearAuth } from '../../features/auth/authSlice';
 import { useAuth } from '../../contexts/AuthContext';
-import TimeBasedGreeting from '@/components/atoms/TimeBasedGreeting';
+import TimeBasedGreeting from '@/components/timeStamps/TimeBasedGreeting';
 
 const Dashboard = () => {
   const { logout } = useAuth();
@@ -43,6 +43,9 @@ const Dashboard = () => {
       case 10:
         navigate('/virtualize-chat');
         break;
+      case 11:
+        navigate('/message');
+        break;
       default:
         break;
     }
@@ -71,7 +74,8 @@ const Dashboard = () => {
       <br></br>
       <button onClick={() => handleClick(10)}>Virtualized Chat</button>
       <br></br>
-      <button onClick={() => handleClick(4)}>Logout</button>
+      <button onClick={() => handleClick(11)}>Message with Timestamp</button>
+      <br></br>
     </div>
   );
 };

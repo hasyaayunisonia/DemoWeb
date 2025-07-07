@@ -10,6 +10,8 @@ const CommentForm = lazy(() => import('../pages/commentForm/index'));
 const UploadFormWithMock = lazy(() => import('../pages/uploadForm/index'));
 const Student = lazy(() => import('../pages/student/index'));
 const VirtualizedMuiChat = lazy(() => import('../pages/virtualizeChat/index'));
+const MessageWithTimestamp = lazy(() => import('../pages/message/index'));
+const BuggyComponent = lazy(() => import('../pages/buggy/index'));
 
 export const privateRoutes = [
   {
@@ -51,5 +53,13 @@ export const privateRoutes = [
   {
     path: '/virtualize-chat',
     element: <VirtualizedMuiChat />,
+  },
+  {
+    path: '/message',
+    element: <MessageWithTimestamp />,
+  },
+  {
+    path: '/buggy',
+    element: <BuggyComponent />,
   },
 ];
