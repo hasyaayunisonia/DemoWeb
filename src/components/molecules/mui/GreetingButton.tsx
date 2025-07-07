@@ -1,6 +1,6 @@
 // components/GreetingButton.tsx
 import React, { useState } from 'react';
-import { fetchGreeting } from '../../services/greetingService';
+import { fetchGreeting } from '../../../services/greetingService';
 type Props = {
   name: string;
   onGreet?: (message: string) => void;

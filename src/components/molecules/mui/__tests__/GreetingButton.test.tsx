@@ -1,10 +1,10 @@
 // __tests__/GreetingButton.test.tsx
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import GreetingButton from '../GreetingButton';
-import * as greetingService from '../../../services/greetingService';
+import * as greetingService from '../../../../services/greetingService';
 
 // 1. Mock dependency
-jest.mock('../../../services/greetingService');
+jest.mock('../../../../services/greetingService');
 
 describe('GreetingButton Component', () => {
   const mockFetchGreeting = greetingService.fetchGreeting as jest.Mock;
