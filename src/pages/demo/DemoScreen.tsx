@@ -5,16 +5,16 @@ import {
   DialogTitle,
   DialogFooter,
   DialogContent,
-} from '@/components/ui/dialog';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+} from '@/components/atoms/ui/dialog';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/atoms/ui/tabs';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import ThemeToggle from '../../components/ThemeToogle';
-import StyledButton from '@/components/StyledButton';
+} from '@/components/atoms/ui/dropdown-menu';
+import ThemeToggle from '../../components/atoms/ThemeToogle';
+import StyledButton from '@/components/atoms/StyledButton';
 import styles from '../../styles/Demo.module.css';
 
 export default function DemoScreen() {

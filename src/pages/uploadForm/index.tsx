@@ -109,6 +109,7 @@ export default function AutoUploadOnSelect() {
       });
       console.log('Submit response:', res.data);
     } catch (err) {
+      console.log(err);
       enqueueSnackbar('Gagal mengirim form', { variant: 'error' });
     } finally {
       setIsLoadingSubmitting(false);
