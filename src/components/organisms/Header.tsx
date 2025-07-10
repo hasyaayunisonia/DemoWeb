@@ -19,7 +19,14 @@ const Header = () => {
   return (
     <header className="w-full p-4 bg-gray-100 flex justify-between items-center sticky top-0 z-50">
       <div className="flex gap-4">
-        <Link to="/dashboard" className={location.pathname === '/dashboard' ? 'text-blue-500' : ''}>
+        <Link
+          to="/dashboard"
+          className={
+            location.pathname === '/dashboard'
+              ? 'text-blue-500'
+              : 'text-gray-700 dark:text-gray-400'
+          }
+        >
           {location.pathname === '/dashboard' ? 'Welcome To Dashboard' : 'Back To Dashboard'}
         </Link>
       </div>
