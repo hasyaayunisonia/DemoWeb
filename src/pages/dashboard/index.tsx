@@ -46,6 +46,9 @@ const Dashboard = () => {
       case 11:
         navigate('/message');
         break;
+      case 12:
+        navigate('/accessible-page');
+        break;
       default:
         break;
     }
@@ -75,6 +78,8 @@ const Dashboard = () => {
       <button onClick={() => handleClick(10)}>Virtualized Chat</button>
       <br></br>
       <button onClick={() => handleClick(11)}>Message with Timestamp</button>
+      <br></br>
+      <button onClick={() => handleClick(12)}>Accessible Page</button>
       <br></br>
     </div>
   );

@@ -12,6 +12,7 @@ const Student = lazy(() => import('../pages/student/index'));
 const VirtualizedMuiChat = lazy(() => import('../pages/virtualizeChat/index'));
 const MessageWithTimestamp = lazy(() => import('../pages/message/index'));
 const BuggyComponent = lazy(() => import('../pages/buggy/index'));
+const AccessiblePage = lazy(() => import('../pages/accesibleWCAG/index'));
 
 export const privateRoutes = [
   {
@@ -61,5 +62,9 @@ export const privateRoutes = [
   {
     path: '/buggy',
     element: <BuggyComponent />,
+  },
+  {
+    path: '/accessible-page',
+    element: <AccessiblePage />,
   },
 ];
