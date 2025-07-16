@@ -61,6 +61,7 @@ const FormLaporanKerusakan = () => {
         border: '1px solid #ccc',
         borderRadius: 2,
         boxShadow: 1,
+        backgroundColor: 'white',
       }}
     >
       <Typography variant="h6">Form Laporan Kerusakan Barang</Typography>
@@ -75,6 +76,15 @@ const FormLaporanKerusakan = () => {
             fullWidth
             error={!!errors.nama}
             helperText={errors.nama?.message}
+            InputProps={{
+              sx: { backgroundColor: 'white' },
+            }}
+            inputProps={{
+              style: { backgroundColor: 'white' },
+            }}
+            InputLabelProps={{
+              sx: { color: 'rgba(0,0,0,0.87)' },
+            }}
           />
         )}
       />
@@ -97,6 +107,17 @@ const FormLaporanKerusakan = () => {
                 fullWidth
                 error={!!errors.jenisBarang}
                 helperText={errors.jenisBarang?.message}
+                InputProps={{
+                  ...params.InputProps,
+                  sx: { backgroundColor: 'white' },
+                }}
+                inputProps={{
+                  ...params.inputProps,
+                  style: { backgroundColor: 'white' },
+                }}
+                InputLabelProps={{
+                  sx: { color: 'rgba(0,0,0,0.87)' },
+                }}
               />
             )}
           />
@@ -115,6 +136,15 @@ const FormLaporanKerusakan = () => {
             fullWidth
             error={!!errors.deskripsi}
             helperText={errors.deskripsi?.message}
+            InputProps={{
+              sx: { backgroundColor: 'white' },
+            }}
+            inputProps={{
+              style: { backgroundColor: 'white' },
+            }}
+            InputLabelProps={{
+              sx: { color: 'rgba(0,0,0,0.87)' },
+            }}
           />
         )}
       />
