@@ -41,9 +41,15 @@ const AccessibleModal: React.FC<AccessibleModalProps> = ({ open, onClose }) => {
             autoFocus
             fullWidth
             margin="dense"
-            aria-label="Nama Lengkap"
+            // aria-label="Nama Lengkap"
           />
-          <TextField label="Email" type="email" fullWidth margin="dense" aria-label="Email" />
+          <TextField
+            label="Email"
+            type="email"
+            fullWidth
+            margin="dense"
+            // aria-label="Email"
+          />
         </form>
       </DialogContent>
       <DialogActions>
